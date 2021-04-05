@@ -1,0 +1,136 @@
+baseurl: "/"
+languageCode: "en-us"
+title: "Xu Kuang"
+theme: "hugo-lithium-theme"
+googleAnalytics: "UA-100370947-1"
+disqusShortname: "xukuang"
+ignoreFiles: ["\\.Rmd$", "_files$", "_cache$"]
+hasCJKLanguage: true
+enableEmoji: true
+footnotereturnlinkcontents: "↩"
+rssLimit: 30
+relativeurls: true
+
+permalinks:
+  cn: "/cn/:year-:month-:day-:slug/"
+  en: "/en/:year-:month-:day-:slug/"
+  test: "/test/:year-:month-:day-:slug/"
+
+menu:
+  main:
+    - name: "About"
+      #url: "/about/"
+      url: "/cn/about/"
+      weight: 1
+#    - name: "CV"
+#      url: "/cv/"
+#      weight: 2
+#    - name: "Research"
+#      url: "/research/"
+#      weight: 3
+    - name: "Links"
+      url: "/links/"
+      weight: 4
+#    - name: "Image story"
+#      url: "/imstory/"
+#      weight: 4
+    - name: "Blog"
+      url: "/en/"
+      #url: "/cn/"
+      weight: 5
+    - name: "博客"
+      url: "/cn/"
+      weight: 6
+  en:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "About"
+      #url: "/about/"
+      url: "/cn/about/"
+      weight: 2
+    - name: "Blog"
+      url: "/en/"
+      weight: 3
+#    - name: "Notes"
+#      url: "http://kangyu.postach.io/"
+#      weight: 3
+    - name: "博客"
+      url: "/cn/"
+      weight: 4
+  cn:
+    - name: "首页"
+      url: "/"
+      weight: 1
+    - name: "关于"
+      url: "/cn/about/"
+      weight: 2
+    - name: "Blog"
+      url: "/en/"
+      weight: 3
+#   - name: "试验"
+#     url: "/test/"
+#     weight: 4
+    - name: "博客"
+      url: "/cn/"
+      weight: 5
+#  test:
+#    - name: "首页"
+#      url: "/"
+#      weight: 1
+#    - name: "关于"
+#      url: "/cn/about/"
+#      weight: 2
+#    - name: "博客"
+#      url: "/cn/"
+#      weight: 3
+#    - name: "试验"
+#      url: "/test/"
+#      weight: 4
+#    - name: "English"
+#      url: "/en/"
+#      weight: 5
+
+params:
+  description: "Personal website of Xu Kuang"
+  disqusURL: "http://kx.netlify.com/"
+  dateFormat: "2006/01/02"
+  customCSS: ["css/custom.css"]
+  customJS: ["js/center-img.js", "js/right-quote.js", "js/no-highlight.js", "js/fix-footnote.js"]
+  githubContentURL: ""
+
+  # options for highlight.js (version, additional languages, and theme)
+  highlightjsVersion: "9.11.0"
+  highlightjsCDN: "//cdn.bootcss.com"
+  highlightjsLang: ["r", "yaml", "tex"]
+  highlightjsTheme: "github"
+
+  MathJaxVersion: "2.7.1"
+  MathJaxCDN: "//cdn.bootcss.com"
+  
+  social:
+    twitter: ""
+    github: "xukuang"
+    wechat: ""
+    wechat_url: "/images/wechat.jpg"
+    weibo: ""
+    weibo_url: "yiyuzhijian"
+
+  logo:
+    url: "logo.png"
+    width: 60
+    height: 50
+    alt: "Xu Kuang"
+
+  author:
+    en: "Xu Kuang"
+    cn: "Kuang, Xu"
+
+  lang:
+    edit:
+      en: "Suggest an edit of this page"
+      cn: "编辑本页"
+
+blackfriday:
+    extensionsmask: ["noIntraEmphasis"]
+    hrefTargetBlank: true

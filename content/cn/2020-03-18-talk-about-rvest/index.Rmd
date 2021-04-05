@@ -1,0 +1,28 @@
+---
+title: revest包中基础函数的作用
+author: Kuang, Xu
+date: '2020-03-18'
+slug: talk-about-rvest
+categories:
+  - 技术篇
+tags:
+  - R
+---
+
+从网上爬取数据已经成为获取数据的一种重要手段，rvest是R软件用来从网上爬取数据的包，使用起来非常方便。其实，之前已经通过revest包爬取过网络数据，但由于当时对网页构成，对revest包中函数并不了解。在对网页结构有了一定的了解后，本文讲述revest包一些重要的函数的作用。这里牵涉到了标签、标签属性（标签属性包括标签属性名称与标签属性值）、标签内的文本，具体内容可以参考[HTML 简单介绍](https://kx.netlify.com/cn/2016-06-04-html%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/)。
+
+read_html函数：读取html文档，读取的文件可以是网上的url，也可以是下载到本地的html文件，甚至可以是包含html的字符串。
+
+html_nodes函数：提取文档中指定的标签(revest包称为“节点”，但个人认为称为“标签”更合适)。该函数的节点参数可使用css selectors形式，如html_nodes(html, "h2 span.mw-headline")；也可使用xpath selectors形式，如html_nodes(html, xpath = "//h2//span.mw-headline")。这里要明确**标签的书写原则就是确保唯一性**。
+
+html_tag函数：提取指定标签的名称。
+
+html_attrs函数：提取指定标签属性名称与值。
+
+html_attr函数：提取指定标签属性的值。
+
+html_text函数：提取指定标签内的文本。
+
+html_table函数：解析网页数据表的数据到R的数据框中。
+
+此外，html_form,set_values和submit_form函数分别用于提取、修改和提交表单。
